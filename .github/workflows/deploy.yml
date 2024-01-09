@@ -24,10 +24,6 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Deploy with gh-pages
-        run: |
-               git remote set-url origin https://git:risqikhoirul@github.com/CertificateDapps.git
-               npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
