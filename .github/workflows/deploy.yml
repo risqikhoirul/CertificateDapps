@@ -23,23 +23,11 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Deploy
-        run: npm run deploy
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          branch: main
-          folder: build
+        a
+      - name: Deploy with gh-pages
+        run: |
+               git remote set-url origin https://git:${ACCESS_TOKEN}@github.com/CertificateDapps.git
+               npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
