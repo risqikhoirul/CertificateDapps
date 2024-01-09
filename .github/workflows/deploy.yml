@@ -37,3 +37,6 @@ jobs:
         with:
           branch: gh-pages
           folder: build
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
