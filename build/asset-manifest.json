@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CertificateDapps/static/css/main.6ccd65a8.css",
+    "main.js": "/CertificateDapps/static/js/main.05cfc5b0.js",
+    "static/js/988.6017e1da.chunk.js": "/CertificateDapps/static/js/988.6017e1da.chunk.js",
+    "index.html": "/CertificateDapps/index.html",
+    "main.6ccd65a8.css.map": "/CertificateDapps/static/css/main.6ccd65a8.css.map",
+    "main.05cfc5b0.js.map": "/CertificateDapps/static/js/main.05cfc5b0.js.map",
+    "988.6017e1da.chunk.js.map": "/CertificateDapps/static/js/988.6017e1da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ccd65a8.css",
+    "static/js/main.05cfc5b0.js"
+  ]
+}
