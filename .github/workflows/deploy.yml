@@ -23,7 +23,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        a
+        
       - name: Deploy with gh-pages
         run: |
                git remote set-url origin https://git:${ACCESS_TOKEN}@github.com/CertificateDapps.git
