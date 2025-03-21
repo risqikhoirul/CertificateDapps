@@ -1,7 +1,7 @@
 {
   "name": "your-react-app",
   "version": "1.0.0",
-  "homepage": "https://risqikhoirul.github.io/CertificateDapps",
+  "homepage": "/",
   "dependencies": {
     "@metamask/detect-provider": "^2.0.0",
     "@react-pdf/renderer": "^3.1.9",
