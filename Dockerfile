@@ -1,29 +1,14 @@
-# Gunakan image Node.js untuk membangun aplikasi
-FROM node:18 AS build
-
-# Atur direktori kerja dalam container
+# Step 1: Build React App
+FROM node:18 AS builder
 WORKDIR /app
-
-# Salin file package.json dan package-lock.json
-COPY package.json package-lock.json ./
-
-# Install dependencies
+COPY package*.json ./
 RUN npm install
-
-# Salin semua kode sumber ke dalam container
 COPY . .
-
-# Build aplikasi React
 RUN npm run build
 
-# Gunakan image Nginx untuk menjalankan aplikasi React
-FROM nginx:1.23
-
-# Salin file build ke dalam direktori default Nginx
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 80
+# Step 2: Serve with Nginx
+FROM nginx:stable-alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
-
-# Jalankan Nginx
 CMD ["nginx", "-g", "daemon off;"]
